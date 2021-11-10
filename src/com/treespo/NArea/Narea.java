@@ -1,23 +1,25 @@
 package com.treespo.NArea;
 
-public class Narea implements Definicoes{
+import com.treespo.Definicoes;
 
-    public No root;
+public class Narea implements Definicoes {
+
+    public NodeNArea root;
 
     public Narea (){
         root = null;
     }
 
-    public No getRoot(){
+    public NodeNArea getRoot(){
         return root;
     }
 
     public void insert (int info){
-        No posNo, ant=null;
+        NodeNArea posNo, ant=null;
         int pos = 0;
         boolean flag = false;
         if(root == null){
-            root = new No(info);
+            root = new NodeNArea(info);
         }
         else {
             posNo = root;
@@ -36,11 +38,11 @@ public class Narea implements Definicoes{
                 }
             }
             if (!flag)
-                    ant.setvLig(pos, new No(info));
+                    ant.setvLig(pos, new NodeNArea(info));
         }
     }
 
-    public void inOrdem (No root){
+    public void inOrdem (NodeNArea root){
         if(root != null){
             for (int i =0; i< root.getTl(); i++){
                 inOrdem(root.getvLig(i));

@@ -1,7 +1,6 @@
 package com.treespo;
 
 import com.treespo.NArea.Narea;
-import com.treespo.NArea.No;
 
 public class Main {
 

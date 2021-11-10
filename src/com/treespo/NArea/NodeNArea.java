@@ -1,17 +1,19 @@
 package com.treespo.NArea;
 
-public class No implements Definicoes {
+import com.treespo.Definicoes;
+
+public class NodeNArea implements Definicoes {
     private int vInfo[];
-    private No vLig[];
+    private NodeNArea vLig[];
     private int tl;
 
-    public No(){
+    public NodeNArea(){
         vInfo = new int [N-1];
-        vLig = new No [N];
+        vLig = new NodeNArea[N];
         tl = 0;
     }
 
-    public No(int info){
+    public NodeNArea(int info){
         this(); // chama outro construtor, no caso, o de cima
         vInfo[0] = info;
         tl = 1;
@@ -25,11 +27,11 @@ public class No implements Definicoes {
         vInfo[pos] = info;
     }
 
-    public No getvLig(int pos) {
+    public NodeNArea getvLig(int pos) {
         return vLig[pos];
     }
 
-    public void setvLig(int pos, No lig) {
+    public void setvLig(int pos, NodeNArea lig) {
         vLig[pos] = lig;
     }
 
